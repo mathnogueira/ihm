@@ -24,19 +24,46 @@
 				nome: 'Ranxeira',
 				local: 'Lavras',
 				data: '21/05/2018',
-				preco: '12,50',
-				descricao: 'Festa muito doida!',
+				preco: '5,50',
+				descricao: 'Festa muito doida com muita lama!',
 				pontosVenda: 'Cantina da ema',
 			},
 			{ 
 				id: 3,
 				nome: 'MC Claudinho',
 				local: 'Lavras',
-				data: '21/05/2018',
-				preco: '12,50',
-				descricao: 'Festa muito doida!',
+				data: '21/05/2017',
+				preco: '15,50',
+				descricao: 'Festa muito louca!',
 				pontosVenda: 'Jardim do jacaré banguelo',
 			},
+			{
+				id: 4,
+				nome: "Festa no Apê",
+				local: "Pouso Alegre",
+				data: "22/08/2017",
+				preco: "34,50",
+				descricao: "Meus pais viajaram, vamos fazer uma festa no apê deles!",
+				pontosVenda: "Autoposto Fernandão"
+			},
+			{
+				id: 5,
+				nome: "Boliche",
+				local: "São Paulo",
+				data: "28/02/2017",
+				preco: "79,99",
+				descricao: "Bora jogar boliche!",
+				pontosVenda: "Boliche de SP"
+			},
+			{
+				id: 6,
+				nome: "Rodada de Cerveja do DCC",
+				local: "Rep. Mamacadela",
+				data: "01/03/2017",
+				preco: "25,00",
+				descricao: "Esquenta pra volta das aulas do DCC depois do carnaval!",
+				pontosVenda: "Cantina da UFLA"
+			}
 		];
 		var favorites = [];
 
