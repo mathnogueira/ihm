@@ -11,22 +11,22 @@ gulp.task('default', () => {
 gulp.task('pug', () => {
 	return gulp.src('src/**/*.pug')
 		.pipe(pug({ pretty: true }))
-		.pipe(gulp.dest('dist/'));
+		.pipe(gulp.dest('build/'));
 });
 
 gulp.task('copyApp', () => {
 	return gulp.src('src/app/**/*.js')
-		.pipe(gulp.dest('dist/app'));
+		.pipe(gulp.dest('build/app'));
 });
 
 gulp.task('less', () => {
 	return gulp.src('src/style/app.less')
 		.pipe(less())
-		.pipe(gulp.dest('dist/style/'));
+		.pipe(gulp.dest('build/style/'));
 });
 
 gulp.task('useref', () => {
-	return gulp.src('dist/index.html')
+	return gulp.src('build/index.html')
 		.pipe(useref())
 		.pipe(gulp.dest('release'));
 });
@@ -37,6 +37,6 @@ gulp.task('copyFonts', () => {
 });
 
 gulp.task('copyPages', () => {
-	return gulp.src('dist/app/**/*.html')
+	return gulp.src('build/app/**/*.html')
 		.pipe(gulp.dest('release/app/'));
 })
