@@ -3,6 +3,8 @@
 
 	angular.module('app', [
 		'ui.router',
-		'mobile-angular-ui'
+		'mobile-angular-ui',
+		'ngAnimate',
+		'toastr'
 	]);
 })();

@@ -5,8 +5,8 @@
 		.module('app')
 		.service('ToastService', ToastService);
 
-	ToastService.$inject = [];
-	function ToastService() {
+	ToastService.$inject = ['toastr'];
+	function ToastService(toastr) {
 		var service = {};
 
 		service.show = showToast;
@@ -14,7 +14,7 @@
 		return service;
 
 		function showToast(message, time) {
-			alert(message);
+			toastr.success(message);
 		}
 
 	}
