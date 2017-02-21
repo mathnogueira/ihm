@@ -32,7 +32,6 @@
 		}
 
 		function isFavorite() {
-			console.log('ola');
 			return EventService.isFavorite(vm.event);
 		}
 	}
