@@ -3,10 +3,14 @@ html(ng-app="app")
 	head
 		title App
 		meta(charset="utf-8")
+		// build:css styles/components.css
 		link(rel="stylesheet", href="../bower_components/bootstrap/dist/css/bootstrap.min.css")
 		link(rel="stylesheet", href="../bower_components/mobile-angular-ui/dist/css/mobile-angular-ui-base.min.css")
 		link(rel="stylesheet", href="../bower_components/font-awesome/css/font-awesome.min.css")
+		// endbuild
+		// build:css styles/main.css
 		link(rel="stylesheet", href="style/app.css")
+		// endbuild
 	body
 		// Menu superior com o nome do App
 		.navbar.navbar-app.navbar-absolute-top(ng-controller="NavbarController as navbar")
@@ -18,10 +22,13 @@ html(ng-app="app")
 
 		.scrollable.app-container(ui-view="")
 
+		// build:js scripts/components.js
 		script(src="../bower_components/angular/angular.js")
 		script(src="../bower_components/mobile-angular-ui/dist/js/mobile-angular-ui.min.js")
 		script(src="../bower_components/angular-ui-router/release/angular-ui-router.min.js")
+		// endbuild
 
+		// build:js scripts/main.js
 		script(src="app/app.module.js")
 		script(src="app/app.routes.js")
 
@@ -35,3 +42,4 @@ html(ng-app="app")
 
 		script(src="app/event/details.controller.js")
 		script(src="app/event/add.controller.js")
+		// endbuild

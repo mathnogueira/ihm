@@ -1,0 +1,29 @@
+
+<h3>{{ eventCtrl.event.nome }}</h3>
+<div class="event-info">
+  <ul>
+    <li>
+      <label>Preço:</label><span>R${{ eventCtrl.event.preco }}</span>
+    </li>
+    <li>
+      <label>Local:</label><span>{{ eventCtrl.event.local }}</span>
+    </li>
+    <li>
+      <label>Data:</label><span>{{ eventCtrl.event.data }}</span>
+    </li>
+    <li>
+      <label>Descrição:</label>
+      <p>{{ eventCtrl.event.descricao }}</p>
+    </li>
+    <li>
+      <label>Pontos de venda: </label>
+      <p>{{ eventCtrl.event.pontosVenda }}</p>
+    </li>
+  </ul>
+</div>
+<div class="text-center"><a class="btn btn-primary" ng-click="eventCtrl.addFavorite()" ng-if="!eventCtrl.isFavorite()">Adicionar aos favoritos</a><a class="btn btn-primary" ng-click="eventCtrl.removeFromFavorites()" ng-if="eventCtrl.isFavorite()">Remover dos favoritos</a></div>
+<!-- Tarefas-->
+<div class="navbar navbar-app navbar-absolute-bottom">
+  <div class="pull-left icons-group"><a class="btn btn-default btn-round icon" id="listMyFavorites" ui-sref="MyFavorites"><i class="fa fa-star"></i></a><a class="btn btn-default btn-round icon" id="listAllEvents" ui-sref="Logged"><i class="fa fa-list"></i></a></div>
+  <div class="pull-right"><a class="btn btn-default btn-round icon" id="addEvent" ui-sref="AddEvent"><i class="fa fa-plus"></i></a></div>
+</div>
