@@ -11,5 +11,8 @@ block content
 			li(ng-repeat="event in home.events | filter: home.search", ng-click="home.viewDetails(event)")
 				span {{ event.nome }}
 				span.pull-right {{ event.data }}
-		.alert.alert-info(ng-if="home.events.length === 0")
-			h3 Nenhum evento encontrado =(
+		.alert.alert-info.text-center(ng-if="home.events.length === 0")
+			h4
+				span.alert-icon
+					i.fa.fa-frown-o
+				| Nenhum evento encontrado =(
