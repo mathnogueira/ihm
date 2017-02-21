@@ -14,6 +14,8 @@
 		vm.addFavorite = addFavorite;
 		vm.removeFromFavorites = removeFromFavorites;
 		vm.isFavorite = isFavorite;
+		vm.amIOwner = amIOwner;
+		vm.removeEvent = removeEvent;
 
 		init();
 
@@ -26,6 +28,12 @@
 			ToastService.show('Evento adicionado aos favoritos!');
 		}
 
+		function removeEvent() {
+			EventService.removeEvent(vm.event);
+			ToastService.show('Evento removido com sucesso!');
+			$state.go('Logged');
+		}
+
 		function removeFromFavorites() {
 			EventService.removeFavorite(vm.event);
 			ToastService.show('Evento removido com sucesso!');
@@ -33,6 +41,10 @@
 
 		function isFavorite() {
 			return EventService.isFavorite(vm.event);
+		}
+
+		function amIOwner() {
+			return !!vm.event.owner;
 		}
 	}
 })();

@@ -50,6 +50,7 @@
 		service.removeFavorite = removeFavorite;
 		service.listFavorites = listFavorites;
 		service.isFavorite = isFavorite;
+		service.removeEvent = removeEvent;
 
 		return service;
 
@@ -67,8 +68,16 @@
 		}
 
 		function addEvent(event) {
+			event.owner = true;
 			mockEvents.push(event);
 			event.id = lastId++;
+		}
+
+		function removeEvent(event) {
+			mockEvents.splice(mockEvents.indexOf(event), 1);
+			let indexFav = favorites.indexOf(event);
+			if (indexFav >= 0)
+				favorites.splice(indexFav, 1);
 		}
 
 		function addFavorite(event) {

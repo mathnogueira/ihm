@@ -21,7 +21,10 @@
     </li>
   </ul>
 </div>
-<div class="text-center"><a class="btn btn-primary" ng-click="eventCtrl.addFavorite()" ng-if="!eventCtrl.isFavorite()">Adicionar aos favoritos</a><a class="btn btn-primary" ng-click="eventCtrl.removeFromFavorites()" ng-if="eventCtrl.isFavorite()">Remover dos favoritos</a></div>
+<div class="text-center">
+  <div class="pull-left"><a class="btn btn-primary" ng-click="eventCtrl.addFavorite()" ng-if="!eventCtrl.isFavorite()">Adicionar aos favoritos</a><a class="btn btn-primary" ng-click="eventCtrl.removeFromFavorites()" ng-if="eventCtrl.isFavorite()">Remover dos favoritos</a></div>
+  <div class="pull-right"><a class="btn btn-primary" ng-click="eventCtrl.removeEvent()" ng-if="eventCtrl.amIOwner()">Remover evento</a></div>
+</div>
 <!-- Tarefas-->
 <div class="navbar navbar-app navbar-absolute-bottom">
   <div class="pull-left icons-group"><a class="btn btn-default btn-round icon" id="listMyFavorites" ui-sref="MyFavorites"><i class="fa fa-star"></i></a><a class="btn btn-default btn-round icon" id="listAllEvents" ui-sref="Logged"><i class="fa fa-list"></i></a></div>

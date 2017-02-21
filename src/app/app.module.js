@@ -13,7 +13,7 @@
 	ToastrConfig.$inject = ['toastrConfig'];
 	function ToastrConfig(toastrConfig) {
 		angular.extend(toastrConfig, {
-			positionClass: 'toast-bottom-center',
+			positionClass: 'toast-top-center',
 		});
 	}
 })();
