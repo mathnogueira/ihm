@@ -31,6 +31,7 @@
 				controllerAs: 'home',
 				params: {
 					ignore: false,
+					pageName: 'Todos os eventos'
 				},
 				resolve: {
 					events: ['EventService', (EventService) => EventService.list()]
@@ -44,7 +45,8 @@
 				controller: 'EventDetailsController',
 				controllerAs: 'eventCtrl',
 				params: {
-					event: null
+					event: null,
+					pageName: 'Detalhes do evento'
 				},
 				resolve: {
 					event: ['EventService', '$stateParams',
@@ -59,6 +61,9 @@
 				templateUrl: 'app/event/add.html',
 				controller: 'EventAddController',
 				controllerAs: 'eventCtrl',
+				params: {
+					pageName: 'Adicionar novo evento',
+				}
 			})
 
 			.state({
@@ -69,6 +74,7 @@
 				controllerAs: 'home',
 				params: {
 					event: null,
+					pageName: 'Meus eventos favoritos'
 				},
 				resolve: {
 					events: ['EventService', (EventService) => EventService.listFavorites()]

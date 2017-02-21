@@ -11,6 +11,7 @@
 		
 		vm.goBack = goBack;
 		vm.hasPreviousState = false;
+		vm.currentPage = null;
 
 		var stateStack = [];
 
@@ -30,6 +31,12 @@
 			if (from && from.name && !toParams.ignore) {
 				stateStack.push(from);
 				vm.hasPreviousState = true;
+			}
+			if (toParams && toParams.pageName) {
+				vm.currentPage = {
+					state: to.name,
+					name: toParams.pageName
+				};
 			}
 		}
 

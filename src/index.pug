@@ -17,6 +17,8 @@ html(ng-app="app")
 		.navbar.navbar-app.navbar-absolute-top(ng-controller="NavbarController as navbar")
 			.navbar-brand.navbar-brand-center
 				span My App
+				span(ng-if="navbar.currentPage") /
+				span(ng-if="navbar.currentPage") {{ vm.currentPage.name }}
 			.navbar-back-btn(ng-if="navbar.hasPreviousState")
 				a(ng-click="navbar.goBack()", href="")
 					i.fa.fa-arrow-left
