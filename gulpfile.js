@@ -1,8 +1,12 @@
-let gulp = require('gulp');
-let pug = require('gulp-pug');
-let less = require('gulp-less');
-let useref = require('gulp-useref');
-let sequence = require('run-sequence');
+var gulp = require('gulp');
+var pug = require('gulp-pug');
+var less = require('gulp-less');
+var useref = require('gulp-useref');
+var sequence = require('run-sequence');
+var uglify = require('gulp-uglify');
+var gulpif = require('gulp-if');
+var babel = require('gulp-babel');
+var minify = require('gulp-cssmin');
 
 gulp.task('default', () => {
 	sequence('pug', 'copyApp', 'less', 'copyFonts', 'copyPages', 'useref');
@@ -16,6 +20,7 @@ gulp.task('pug', () => {
 
 gulp.task('copyApp', () => {
 	return gulp.src('src/app/**/*.js')
+		.pipe(babel({ presets: ['es2015'] }))
 		.pipe(gulp.dest('build/app'));
 });
 
@@ -28,6 +33,8 @@ gulp.task('less', () => {
 gulp.task('useref', () => {
 	return gulp.src('build/index.html')
 		.pipe(useref())
+		.pipe(gulpif('*.js', uglify()))
+		.pipe(gulpif('*.css', minify()))
 		.pipe(gulp.dest('release'));
 });
 
@@ -39,4 +46,4 @@ gulp.task('copyFonts', () => {
 gulp.task('copyPages', () => {
 	return gulp.src('build/app/**/*.html')
 		.pipe(gulp.dest('release/app/'));
-})
+});
