@@ -32,7 +32,6 @@
 				stateStack.push(from);
 				vm.hasPreviousState = true;
 			}
-			console.log(toParams);
 			if (toParams && toParams.pageName) {
 				vm.currentPage = {
 					state: to.name,
