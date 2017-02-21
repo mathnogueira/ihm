@@ -6,5 +6,14 @@
 		'mobile-angular-ui',
 		'ngAnimate',
 		'toastr'
-	]);
+	])
+
+	.config(ToastrConfig);
+
+	ToastrConfig.$inject = ['toastrConfig'];
+	function ToastrConfig(toastrConfig) {
+		angular.extend(toastrConfig, {
+			positionClass: 'toast-bottom-center',
+		});
+	}
 })();
