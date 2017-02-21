@@ -1,0 +1,25 @@
+extends ../templates/logged.template.pug
+
+block content
+	.event-info
+		ul
+			li
+				label Título:
+				input.form-control(placeholder="Título do evento", ng-model="eventCtrl.event.nome")
+			li
+				label Preco:
+				input.form-control(placeholder="Preço do ingresso", ng-model="eventCtrl.event.preco")
+			li
+				label Local:
+				input.form-control(placeholder="Local do evento", ng-model="eventCtrl.event.local")
+			li
+				label Data:
+				input.form-control(placeholder="Data do evento", ng-model="eventCtrl.event.data")
+			li
+				label Descrição:
+				textarea.form-control(placeholder="Descreva o seu evento aqui...", ng-model="eventCtrl.event.descricao")
+			li
+				label Pontos de venda: 
+				input.form-control(placeholder="Pontos de venda", ng-model="eventCtrl.event.pontosVenda")
+	.pull-right
+		a.btn.btn-primary(ng-click="eventCtrl.add()") Adicionar

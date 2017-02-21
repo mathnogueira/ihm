@@ -1,0 +1,25 @@
+extends ../templates/logged.template.pug
+
+block content
+	h3 {{ eventCtrl.event.nome }}
+	.event-info
+		ul
+			li
+				label Preço:
+				span R${{ eventCtrl.event.preco }}
+			li
+				label Local:
+				span {{ eventCtrl.event.local }}
+			li
+				label Data:
+				span {{ eventCtrl.event.data }}
+			li
+				label Descrição:
+				p {{ eventCtrl.event.descricao }}
+			li
+				label Pontos de venda: 
+				p {{ eventCtrl.event.pontosVenda }}
+
+	.text-center
+		a.btn.btn-primary(ng-click="eventCtrl.addFavorite()", ng-if="!eventCtrl.isFavorite()") Adicionar aos favoritos
+		a.btn.btn-primary(ng-click="eventCtrl.removeFromFavorites()", ng-if="eventCtrl.isFavorite()") Remover dos favoritos

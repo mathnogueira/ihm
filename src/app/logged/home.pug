@@ -1,0 +1,13 @@
+extends ../templates/logged.template.pug
+
+block content
+	.input-group
+		span.input-group-addon
+			i.fa.fa-search
+		input.form-control(placeholder="Buscar", ng-model="home.search")
+
+	.event-holder
+		ul
+			li(ng-repeat="event in home.events | filter: home.search", ng-click="home.viewDetails(event)")
+				span {{ event.nome }}
+				span.pull-right {{ event.data }}

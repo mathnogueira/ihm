@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app="app">
+  <head>
+    <title>App</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../bower_components/mobile-angular-ui/dist/css/mobile-angular-ui-base.min.css">
+    <link rel="stylesheet" href="../bower_components/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style/app.css">
+  </head>
+  <body>
+    <!-- Menu superior com o nome do App-->
+    <div class="navbar navbar-app navbar-absolute-top" ng-controller="NavbarController as navbar">
+      <div class="navbar-brand navbar-brand-center"><span>My App</span></div>
+      <div class="navbar-back-btn" ng-if="navbar.hasPreviousState"><a ng-click="navbar.goBack()" href=""><i class="fa fa-arrow-left"></i></a></div>
+    </div>
+    <div class="scrollable app-container" ui-view=""></div>
+    <script src="../bower_components/angular/angular.js"></script>
+    <script src="../bower_components/mobile-angular-ui/dist/js/mobile-angular-ui.min.js"></script>
+    <script src="../bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="app/app.module.js"></script>
+    <script src="app/app.routes.js"></script>
+    <script src="app/services/event.service.js"></script>
+    <script src="app/services/toast.service.js"></script>
+    <script src="app/initial/navbar.controller.js"></script>
+    <script src="app/initial/home.controller.js"></script>
+    <script src="app/logged/home.controller.js"></script>
+    <script src="app/event/details.controller.js"></script>
+    <script src="app/event/add.controller.js"></script>
+  </body>
+</html>

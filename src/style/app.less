@@ -1,0 +1,108 @@
+@import "../../bower_components/bootstrap/less/bootstrap.less";
+@import "util.less";
+
+html, body {
+	height: 100%;
+}
+
+.navbar {
+	margin: 0 !important;
+	border-bottom: solid 1px #aaaaaa;
+}
+
+.navbar-back-btn {
+	.btn-group;
+	.pull-left;
+
+	padding-left: 10px;
+
+	> a {
+		line-height: 50px;
+		font-size: 20px;
+	}
+}
+
+.app-container {
+	padding: 55px 5px 50px 5px;
+	height: 100%;
+	background: #eeeeee;
+}
+
+// Authentication
+
+.auth-box {
+	.text-center;
+	margin-top: 80px;
+}
+
+.gplus-auth {
+
+	.btn;
+	padding: 20px 13px;
+	border: solid 1px #888888;
+	display: inline-block;
+	box-shadow: 3px 3px 4px #999999;
+
+	.fa {
+		font-size: 50px;
+		color: #d34836;
+	}
+}
+
+.event-holder {
+	margin-top: 10px;
+
+	ul {
+		list-style: none;
+		padding-left: 0;
+
+		li {
+			width: 100%;
+			min-height: 35px;
+			line-height: 35px;
+			border: solid 1px #2d2d2d;
+			border-bottom: none;
+			padding-left: 10px;
+			padding-right: 10px;
+			cursor: pointer;
+			background: rgba(0, 0, 0, 0.07);
+		}
+
+		li:last-child {
+			border-bottom: solid 1px #2d2d2d;
+		}
+	}
+
+	.event-info {
+		font-size: 18px;
+	}
+}
+
+.event-info {
+	ul {
+		list-style: none;
+		padding-left: 0;
+
+		li {
+			padding-top: 5px;
+			border-bottom: solid 1px #a0a0a0;
+		}
+
+		label {
+			padding-right: 5px;
+			min-width: 60px;
+		}
+	}
+}
+
+#addEvent {
+	background-color: #388E3C !important;
+}
+
+#listMyFavorites {
+	background-color: #E64A19 !important;
+}
+
+#listAllEvents {
+	background-color: #455A64 !important;
+}

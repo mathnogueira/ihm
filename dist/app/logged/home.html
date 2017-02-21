@@ -1,0 +1,14 @@
+
+<div class="input-group"><span class="input-group-addon"><i class="fa fa-search"></i></span>
+  <input class="form-control" placeholder="Buscar" ng-model="home.search"/>
+</div>
+<div class="event-holder">
+  <ul>
+    <li ng-repeat="event in home.events | filter: home.search" ng-click="home.viewDetails(event)"><span>{{ event.nome }}</span><span class="pull-right">{{ event.data }}</span></li>
+  </ul>
+</div>
+<!-- Tarefas-->
+<div class="navbar navbar-app navbar-absolute-bottom">
+  <div class="pull-left icons-group"><a class="btn btn-default btn-round icon" id="listMyFavorites" ui-sref="MyFavorites"><i class="fa fa-star"></i></a><a class="btn btn-default btn-round icon" id="listAllEvents" ui-sref="Logged"><i class="fa fa-list"></i></a></div>
+  <div class="pull-right"><a class="btn btn-default btn-round icon" id="addEvent" ui-sref="AddEvent"><i class="fa fa-plus"></i></a></div>
+</div>
