@@ -11,5 +11,5 @@ block content
 			li(ng-repeat="event in home.events | filter: home.search", ng-click="home.viewDetails(event)")
 				span {{ event.nome }}
 				span.pull-right {{ event.data }}
-		div(ng-if="home.events.length === 0")
-			h3 Nenhum evento encontrado :(
+		.alert.alert-info(ng-if="home.events.length === 0")
+			span Nenhum evento encontrado =(
