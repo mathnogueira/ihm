@@ -7,7 +7,9 @@ block content
 		input.form-control(placeholder="Buscar", ng-model="home.search")
 
 	.event-holder
-		ul
+		ul(ng-if="home.events.length > 0")
 			li(ng-repeat="event in home.events | filter: home.search", ng-click="home.viewDetails(event)")
 				span {{ event.nome }}
 				span.pull-right {{ event.data }}
+		div(ng-if="home.events.length === 0")
+			h3 Nenhum evento encontrado :(

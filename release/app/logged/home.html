@@ -3,9 +3,12 @@
   <input class="form-control" placeholder="Buscar" ng-model="home.search"/>
 </div>
 <div class="event-holder">
-  <ul>
+  <ul ng-if="home.events.length &gt; 0">
     <li ng-repeat="event in home.events | filter: home.search" ng-click="home.viewDetails(event)"><span>{{ event.nome }}</span><span class="pull-right">{{ event.data }}</span></li>
   </ul>
+  <div ng-if="home.events.length === 0">
+    <h3>Nenhum evento encontrado :(</h3>
+  </div>
 </div>
 <!-- Tarefas-->
 <div class="navbar navbar-app navbar-absolute-bottom">
