@@ -1,0 +1,4 @@
+- Encontre um evento chamado "Rodada de Cerveja do DCC" e adicione tal evento como favorito.
+- Crie um evento chamado "Festa Junina do Brejão"
+- Desista da "Rodada de Cerveja do DCC", portanto, desfavorite o evento.
+- Ocorreu um problema de comunicação entre a diretoria da universidade e os organizadores da "Festa Junina do Brejão" e o evento deve ser cancelado.

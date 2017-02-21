@@ -1,5 +1,9 @@
 # App para descoberta de eventos
 
+## ATENÇÃO!!!
+Esse projeto está disponível no endereço: https://mathnogueira.github.io/release/
+Nota: Você deve acessar o endereço a partir de um celular!
+
 ### Instalação
 
 Para construir uma build desse projeto, você deve entrar na pasta do mesmo e executar os seguintes comandos para obter as dependências do projeto:
