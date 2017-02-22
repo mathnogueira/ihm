@@ -7,7 +7,6 @@
 
 	EventService.$inject = [];
 	function EventService() {
-		var lastId = 4;
 
 		var mockEvents = [
 			{ 
@@ -65,6 +64,7 @@
 				pontosVenda: "Cantina da UFLA"
 			}
 		];
+		var lastId = mockEvents.length + 1;
 		var favorites = [];
 
 		var service = {};
