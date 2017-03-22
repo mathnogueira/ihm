@@ -4,7 +4,7 @@
 </div>
 <div class="event-holder">
   <ul ng-if="home.events.length &gt; 0">
-    <li ng-repeat="event in home.events | filter: home.search" ng-click="home.viewDetails(event)"><span>{{ event.nome }}</span><span class="pull-right">{{ event.data }}</span></li>
+    <li ng-repeat="event in home.events | filter: home.search" ng-click="home.viewDetails(event)" ng-class="{'favorite': home.isFavorite(event) }"><span class="fa fa-star"></span><span>{{ event.nome }}</span><span class="pull-right">{{ event.data }}</span></li>
   </ul>
   <div class="alert alert-info text-center" ng-if="home.events.length === 0">
     <h4><span class="alert-icon"><i class="fa fa-frown-o"></i></span>Nenhum evento encontrado =(</h4>

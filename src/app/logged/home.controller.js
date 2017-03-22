@@ -5,11 +5,12 @@
 		.module('app')
 		.controller('LoggedHomeController', LoggedHomeController);
 
-	LoggedHomeController.$inject = ['$scope', '$state', 'events'];
-	function LoggedHomeController($scope, $state, events) {
+	LoggedHomeController.$inject = ['$scope', '$state', 'events', 'EventService'];
+	function LoggedHomeController($scope, $state, events, eventService) {
 		var vm = this;
 
 		vm.viewDetails = viewDetails;
+		vm.isFavorite = isFavorite;
 
 		vm.events = events;
 		
@@ -22,6 +23,10 @@
 
 		function viewDetails(event) {
 			$state.go('EventDetails', { event: event, id: event.id });
+		}
+
+		function isFavorite(event) {
+			return eventService.isFavorite(event);
 		}
 	}
 })();
