@@ -5,12 +5,15 @@
 		.module('app')
 		.controller('EventAddController', EventAddController);
 
-	EventAddController.$inject = ['$scope', '$state', 'EventService', 'ToastService'];
-	function EventAddController($scope, $state, EventService, ToastService) {
+	EventAddController.$inject = ['$scope', '$state', 'EventService', 'ToastService', 'event'];
+	function EventAddController($scope, $state, EventService, ToastService, event) {
 		var vm = this;
 
+		vm.editing = !!event;
+
 		vm.add = addEvent;
-		
+
+		vm.event = event || {};
 
 		init();
 

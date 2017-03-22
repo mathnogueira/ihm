@@ -103,8 +103,10 @@
 
 		function addEvent(event) {
 			event.owner = true;
-			mockEvents.push(event);
-			event.id = lastId++;
+			if (!event.id) {
+				mockEvents.push(event);
+				event.id = lastId++;
+			}
 		}
 
 		function removeEvent(event) {

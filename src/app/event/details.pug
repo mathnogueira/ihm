@@ -24,14 +24,20 @@ block content
 				p {{ eventCtrl.event.pontosVenda }}
 
 	.text-center
-		.pull-left
-			a.btn.btn-primary(ng-click="eventCtrl.addFavorite()", ng-if="!eventCtrl.isFavorite()") 
-				i.fa.fa-star
-				span Favoritar
-			a.btn.btn-primary(ng-click="eventCtrl.removeFromFavorites()", ng-if="eventCtrl.isFavorite()") 
-				i.fa.fa-times
-				span Desfavoritar
-		.pull-right
-			a.btn.btn-primary#removeEvent(ng-click="eventCtrl.removeEvent()", ng-if="eventCtrl.amIOwner()") 
-				i.fa.fa-trash
-				span Apagar evento
+		div(ng-if="!eventCtrl.amIOwner()")
+			.pull-left
+				a.btn.btn-primary(ng-click="eventCtrl.addFavorite()", ng-if="!eventCtrl.isFavorite()") 
+					i.fa.fa-star
+					span Favoritar
+				a.btn.btn-primary(ng-click="eventCtrl.removeFromFavorites()", ng-if="eventCtrl.isFavorite()") 
+					i.fa.fa-times
+					span Desfavoritar
+		div(ng-if="eventCtrl.amIOwner()")
+			.pull-left
+				a.btn.btn-primary#editEvent(ng-click="eventCtrl.editEvent()") 
+					i.fa.fa-pencil
+					span Editar evento
+			.pull-right
+				a.btn.btn-primary#removeEvent(ng-click="eventCtrl.removeEvent()") 
+					i.fa.fa-trash
+					span Apagar evento

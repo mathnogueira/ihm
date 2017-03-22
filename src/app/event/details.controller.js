@@ -16,6 +16,7 @@
 		vm.isFavorite = isFavorite;
 		vm.amIOwner = amIOwner;
 		vm.removeEvent = removeEvent;
+		vm.editEvent = editEvent;
 
 		init();
 
@@ -32,6 +33,10 @@
 			EventService.removeEvent(vm.event);
 			ToastService.show('Evento removido com sucesso!');
 			$state.go('Logged');
+		}
+
+		function editEvent() {
+			$state.go('EditEvent', { event: vm.event, id: vm.event.id });
 		}
 
 		function removeFromFavorites() {

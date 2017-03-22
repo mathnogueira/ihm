@@ -56,6 +56,23 @@
 			})
 
 			.state({
+				name: 'EditEvent',
+				url: '/event/edit/:id',
+				templateUrl: 'app/event/add.html',
+				controller: 'EventAddController',
+				controllerAs: 'eventCtrl',
+				params: {
+					event: null,
+					pageName: 'Editar evento'
+				},
+				resolve: {
+					event: ['EventService', '$stateParams',
+						(EventService, $stateParams) => EventService.get(+$stateParams.id)
+					]
+				}
+			})
+
+			.state({
 				name: 'AddEvent',
 				url: '/event/add',
 				templateUrl: 'app/event/add.html',
