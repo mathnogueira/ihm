@@ -80,6 +80,9 @@
 				controllerAs: 'eventCtrl',
 				params: {
 					pageName: 'Adicionar novo evento',
+				},
+				resolve: {
+					event: () => {}
 				}
 			})
 

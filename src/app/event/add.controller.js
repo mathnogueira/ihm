@@ -11,6 +11,8 @@
 
 		vm.editing = !!event;
 
+		console.log(vm.editing);
+
 		vm.add = addEvent;
 
 		vm.event = event || {};
