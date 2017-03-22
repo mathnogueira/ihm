@@ -16,7 +16,7 @@ html(ng-app="app")
 		// Menu superior com o nome do App
 		.navbar.navbar-app.navbar-absolute-top(ng-controller="NavbarController as navbar")
 			.navbar-brand.navbar-brand-center
-				span My App
+				span Eventos Lavras
 				span.separator(ng-if="navbar.currentPage") /
 				span(ng-if="navbar.currentPage") {{ navbar.currentPage.name }}
 			.navbar-back-btn(ng-if="navbar.hasPreviousState")
