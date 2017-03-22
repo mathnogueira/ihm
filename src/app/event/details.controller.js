@@ -37,6 +37,7 @@
 		function removeFromFavorites() {
 			EventService.removeFavorite(vm.event);
 			ToastService.show('Evento removido com sucesso!');
+			$state.go('Logged');
 		}
 
 		function isFavorite() {
