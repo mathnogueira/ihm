@@ -35,15 +35,15 @@ gulp.task('useref', () => {
 		.pipe(useref())
 		.pipe(gulpif('*.js', uglify()))
 		.pipe(gulpif('*.css', minify()))
-		.pipe(gulp.dest('release'));
+		.pipe(gulp.dest('new'));
 });
 
 gulp.task('copyFonts', () => {
 	return gulp.src('./bower_components/font-awesome/fonts/*')
-		.pipe(gulp.dest('release/fonts'));
+		.pipe(gulp.dest('new/fonts'));
 });
 
 gulp.task('copyPages', () => {
 	return gulp.src('build/app/**/*.html')
-		.pipe(gulp.dest('release/app/'));
+		.pipe(gulp.dest('new/app/'));
 });
