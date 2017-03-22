@@ -25,7 +25,13 @@ block content
 
 	.text-center
 		.pull-left
-			a.btn.btn-primary(ng-click="eventCtrl.addFavorite()", ng-if="!eventCtrl.isFavorite()") Adicionar aos favoritos
-			a.btn.btn-primary(ng-click="eventCtrl.removeFromFavorites()", ng-if="eventCtrl.isFavorite()") Remover dos favoritos
+			a.btn.btn-primary(ng-click="eventCtrl.addFavorite()", ng-if="!eventCtrl.isFavorite()") 
+				i.fa.fa-star
+				span Favoritar
+			a.btn.btn-primary(ng-click="eventCtrl.removeFromFavorites()", ng-if="eventCtrl.isFavorite()") 
+				i.fa.fa-times
+				span Desfavoritar
 		.pull-right
-			a.btn.btn-primary(ng-click="eventCtrl.removeEvent()", ng-if="eventCtrl.amIOwner()") Remover evento
+			a.btn.btn-primary#removeEvent(ng-click="eventCtrl.removeEvent()", ng-if="eventCtrl.amIOwner()") 
+				i.fa.fa-trash
+				span Apagar evento

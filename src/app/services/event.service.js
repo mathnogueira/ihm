@@ -28,6 +28,7 @@
 				preco: '5,50',
 				descricao: 'Festa muito doida com muita lama!',
 				pontosVenda: 'Cantina da ema',
+				owner: true
 			},
 			{ 
 				id: 3,

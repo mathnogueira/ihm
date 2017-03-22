@@ -25,8 +25,8 @@
   </ul>
 </div>
 <div class="text-center">
-  <div class="pull-left"><a class="btn btn-primary" ng-click="eventCtrl.addFavorite()" ng-if="!eventCtrl.isFavorite()">Adicionar aos favoritos</a><a class="btn btn-primary" ng-click="eventCtrl.removeFromFavorites()" ng-if="eventCtrl.isFavorite()">Remover dos favoritos</a></div>
-  <div class="pull-right"><a class="btn btn-primary" ng-click="eventCtrl.removeEvent()" ng-if="eventCtrl.amIOwner()">Remover evento</a></div>
+  <div class="pull-left"><a class="btn btn-primary" ng-click="eventCtrl.addFavorite()" ng-if="!eventCtrl.isFavorite()"> <i class="fa fa-star"></i><span>Favoritar</span></a><a class="btn btn-primary" ng-click="eventCtrl.removeFromFavorites()" ng-if="eventCtrl.isFavorite()"> <i class="fa fa-times"></i><span>Desfavoritar</span></a></div>
+  <div class="pull-right"><a class="btn btn-primary" id="removeEvent" ng-click="eventCtrl.removeEvent()" ng-if="eventCtrl.amIOwner()"> <i class="fa fa-trash"></i><span>Apagar evento</span></a></div>
 </div>
 <!-- Tarefas-->
 <div class="navbar navbar-app navbar-absolute-bottom">
