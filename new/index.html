@@ -10,7 +10,7 @@
   <body>
     <!-- Menu superior com o nome do App-->
     <div class="navbar navbar-app navbar-absolute-top" ng-controller="NavbarController as navbar">
-      <div class="navbar-brand navbar-brand-center"><span>My App</span><span class="separator" ng-if="navbar.currentPage">/</span><span ng-if="navbar.currentPage">{{ navbar.currentPage.name }}</span></div>
+      <div class="navbar-brand navbar-brand-center"><span>Eventos Lavras</span><span class="separator" ng-if="navbar.currentPage">/</span><span ng-if="navbar.currentPage">{{ navbar.currentPage.name }}</span></div>
       <div class="navbar-back-btn" ng-if="navbar.hasPreviousState"><a ng-click="navbar.goBack()" href=""><i class="fa fa-arrow-left"></i></a></div>
     </div>
     <div class="scrollable app-container" ui-view=""></div>
