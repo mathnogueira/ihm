@@ -7,6 +7,10 @@ block content
 			i.fa.fa-star
 		a.btn.btn-default.btn-round.icon#listAllEvents(ui-sref="Logged")
 			i.fa.fa-home
-	.pull-right
-		a.btn.btn-default.btn-round.icon#addEvent(ui-sref="AddEvent")
+	.pull-right.icons-group
+		a.btn.btn-default.btn-round.icon#addEvent(ui-sref="AddEvent", ng-if="!adding && !editing")
 			i.fa.fa-plus
+		a.btn.btn-default.btn-round.icon#removeEvent(ng-click="cancelAction()", ng-if="adding || editing")
+			i.fa.fa-times
+		a.btn.btn-default.btn-round.icon#addEvent(ng-click="confirmAction()", ng-if="adding || editing")
+			i.fa.fa-check

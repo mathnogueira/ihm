@@ -36,5 +36,5 @@
 <!-- Tarefas-->
 <div class="navbar navbar-app navbar-absolute-bottom">
   <div class="pull-left icons-group"><a class="btn btn-default btn-round icon" id="listMyFavorites" ui-sref="MyFavorites"><i class="fa fa-star"></i></a><a class="btn btn-default btn-round icon" id="listAllEvents" ui-sref="Logged"><i class="fa fa-home"></i></a></div>
-  <div class="pull-right"><a class="btn btn-default btn-round icon" id="addEvent" ui-sref="AddEvent"><i class="fa fa-plus"></i></a></div>
+  <div class="pull-right icons-group"><a class="btn btn-default btn-round icon" id="addEvent" ui-sref="AddEvent" ng-if="!adding &amp;&amp; !editing"><i class="fa fa-plus"></i></a><a class="btn btn-default btn-round icon" id="removeEvent" ng-click="cancelAction()" ng-if="adding || editing"><i class="fa fa-times"></i></a><a class="btn btn-default btn-round icon" id="addEvent" ng-click="confirmAction()" ng-if="adding || editing"><i class="fa fa-check"></i></a></div>
 </div>
