@@ -19,7 +19,7 @@
 
 		vm.add = addEvent;
 
-		vm.event = event || {};
+		vm.event = angular.copy(event) || {};
 
 		init();
 

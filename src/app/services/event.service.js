@@ -106,6 +106,15 @@
 			if (!event.id) {
 				mockEvents.push(event);
 				event.id = lastId++;
+			} else {
+				let target = getEventById(event.id);
+				Object.assign(target, event);
+			}
+		}
+
+		function getEventById(id) {
+			for (let event of mockEvents) {
+				if (event.id === id) return event;
 			}
 		}
 
